@@ -71,9 +71,14 @@ class OandaApi:
             print("ERROR fetch_candles()", params, data)
             return None
 
-    def get_candles_df(self, data):
+    def get_candles_df(self, pair_name, **kwargs):
+
+        data = self.fetch_candles(pair_name, **kwargs)
+
+        if data is None:
+            return None
         if len(data) == 0:
-            return pd.DataFrame.empty
+            return pd.DataFrame()
         
         prices = ['mid', 'bid', 'ask']
         ohlc = ['o', 'h', 'l', 'c']
@@ -86,8 +91,9 @@ class OandaApi:
             new_dict['time'] = parser.parse(candle['time'])
             new_dict['volume'] = candle['volume']
             for p in prices:
-                for o in ohlc:
-                    new_dict[f"{p}_{o}"] = float(candle[p][o])
+                if p in candle:
+                    for o in ohlc:
+                        new_dict[f"{p}_{o}"] = float(candle[p][o])
             final_data.append(new_dict)
         df = pd.DataFrame.from_dict(final_data)
         return df

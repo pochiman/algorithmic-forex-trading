@@ -10,4 +10,4 @@ if __name__ == '__main__':
     instrumentCollection.LoadInstruments("./data")
     # run_collection(instrumentCollection, api)
     # run_ema_macd(instrumentCollection)
-    run_processes()
+    run_processes(instrumentCollection)

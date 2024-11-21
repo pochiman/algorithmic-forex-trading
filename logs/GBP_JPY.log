@@ -1,0 +1,3 @@
+2024-11-21 18:08:20 LogWrapper init() ./logs/GBP_JPY.log
+2024-11-21 18:08:20 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.3}
+2024-11-21 18:08:21 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x10b1206d0>

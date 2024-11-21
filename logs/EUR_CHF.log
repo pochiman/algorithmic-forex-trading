@@ -1,0 +1,2 @@
+2024-11-21 13:22:03 LogWrapper init() ./logs/EUR_CHF.log
+2024-11-21 13:22:03 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.3}

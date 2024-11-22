@@ -1,13 +1,5 @@
-2024-11-22 08:32:16 LogWrapper init() ./logs/GBP_JPY.log
-2024-11-22 08:32:16 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.3}
-2024-11-22 08:32:16 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:33:07 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:34:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:35:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:36:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:37:00 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:38:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:39:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:40:02 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:41:03 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
-2024-11-22 08:42:04 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x110d1acd0>
+2024-11-22 10:27:15 LogWrapper init() ./logs/GBP_JPY.log
+2024-11-22 10:27:15 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.3}
+2024-11-22 10:27:15 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x1086b7410>
+2024-11-22 10:28:06 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x1086b7410>
+2024-11-22 10:28:06 tech_manager: max_rows:30 candle_time:2024-11-22 15:27:00+00:00 granularity:M1

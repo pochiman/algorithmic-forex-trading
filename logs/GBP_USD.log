@@ -1,0 +1,21 @@
+2024-11-22 12:10:43 LogWrapper init() ./logs/GBP_USD.log
+2024-11-22 12:10:43 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
+2024-11-22 12:10:44 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x112e54d90>
+2024-11-22 12:11:04 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x112e54d90>
+2024-11-22 12:11:04 tech_manager: max_rows:32 candle_time:2024-11-22 17:10:00+00:00 granularity:M1
+2024-11-22 12:11:04 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD      GAIN  SIGNAL
+26  GBP_USD 2024-11-22 17:06:00+00:00  1.25204  1.25199  0.00019  0.000371       0
+27  GBP_USD 2024-11-22 17:07:00+00:00  1.25166  1.25204  0.00018  0.000061       0
+28  GBP_USD 2024-11-22 17:08:00+00:00  1.25172  1.25166  0.00019  0.000042       0
+29  GBP_USD 2024-11-22 17:09:00+00:00  1.25162  1.25170  0.00019  0.000161       0
+30  GBP_USD 2024-11-22 17:10:00+00:00  1.25206  1.25163  0.00018  0.000244       0
+2024-11-22 12:12:05 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x112e54d90>
+2024-11-22 12:12:06 tech_manager: max_rows:32 candle_time:2024-11-22 17:11:00+00:00 granularity:M1
+2024-11-22 12:12:06 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD      GAIN  SIGNAL
+26  GBP_USD 2024-11-22 17:07:00+00:00  1.25166  1.25204  0.00018  0.000061       0
+27  GBP_USD 2024-11-22 17:08:00+00:00  1.25172  1.25166  0.00019  0.000042       0
+28  GBP_USD 2024-11-22 17:09:00+00:00  1.25162  1.25170  0.00019  0.000161       0
+29  GBP_USD 2024-11-22 17:10:00+00:00  1.25206  1.25163  0.00018  0.000244       0
+30  GBP_USD 2024-11-22 17:11:00+00:00  1.25192  1.25206  0.00018  0.000068       0

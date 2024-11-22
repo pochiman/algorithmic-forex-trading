@@ -2,6 +2,7 @@ import json
 import time
 from bot.candle_manager import CandleManager
 from bot.technicals_manager import get_trade_decision
+from bot.trade_manager import place_trade
 
 from infrastructure.log_wrapper import LogWrapper
 from models.trade_settings import TradeSettings
@@ -60,10 +61,14 @@ class Bot:
                 if trade_decision is not None and trade_decision.signal != defs.NONE:
                     self.log_message(f"Place Trade: {trade_decision}", p)
                     self.log_to_main(f"Place Trade: {trade_decision}")
-                    # place trade
-                    
+                    place_trade(trade_decision, self.api, self.log_message, self.log_to_error)
+
 
     def run(self):
         while True:
             time.sleep(Bot.SLEEP)
-            self.process_candles(self.candle_manager.update_timings())
+            try:
+                self.process_candles(self.candle_manager.update_timings())
+            except Exception as error:
+                self.log_to_error(f"CRASH: {error}")
+                break

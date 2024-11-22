@@ -1,21 +1,183 @@
-2024-11-22 10:46:48 LogWrapper init() ./logs/EUR_CHF.log
-2024-11-22 10:46:48 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.3}
-2024-11-22 10:46:48 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x1051e6b10>
-2024-11-22 10:47:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x1051e6b10>
-2024-11-22 10:47:08 tech_manager: max_rows:30 candle_time:2024-11-22 15:46:00+00:00 granularity:M1
-2024-11-22 10:47:08 
-                        time  volume    mid_o    mid_h    mid_l    mid_c    bid_o    bid_h    bid_l    bid_c    ask_o    ask_h    ask_l    ask_c
-24 2024-11-22 15:42:00+00:00     114  0.93040  0.93048  0.93023  0.93024  0.93031  0.93040  0.93014  0.93015  0.93049  0.93057  0.93032  0.93032
-25 2024-11-22 15:43:00+00:00     152  0.93028  0.93029  0.93016  0.93020  0.93019  0.93022  0.93009  0.93011  0.93036  0.93037  0.93023  0.93028
-26 2024-11-22 15:44:00+00:00     130  0.93022  0.93053  0.93022  0.93048  0.93013  0.93046  0.93013  0.93040  0.93032  0.93061  0.93031  0.93057
-27 2024-11-22 15:45:00+00:00     123  0.93045  0.93048  0.93018  0.93018  0.93036  0.93039  0.93009  0.93011  0.93054  0.93057  0.93025  0.93025
-28 2024-11-22 15:46:00+00:00     140  0.93017  0.93028  0.93008  0.93010  0.93009  0.93022  0.93002  0.93003  0.93025  0.93035  0.93015  0.93018
-2024-11-22 10:48:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x1051e6b10>
-2024-11-22 10:48:09 tech_manager: max_rows:30 candle_time:2024-11-22 15:47:00+00:00 granularity:M1
-2024-11-22 10:48:09 
-                        time  volume    mid_o    mid_h    mid_l    mid_c    bid_o    bid_h    bid_l    bid_c    ask_o    ask_h    ask_l    ask_c
-24 2024-11-22 15:43:00+00:00     152  0.93028  0.93029  0.93016  0.93020  0.93019  0.93022  0.93009  0.93011  0.93036  0.93037  0.93023  0.93028
-25 2024-11-22 15:44:00+00:00     130  0.93022  0.93053  0.93022  0.93048  0.93013  0.93046  0.93013  0.93040  0.93032  0.93061  0.93031  0.93057
-26 2024-11-22 15:45:00+00:00     123  0.93045  0.93048  0.93018  0.93018  0.93036  0.93039  0.93009  0.93011  0.93054  0.93057  0.93025  0.93025
-27 2024-11-22 15:46:00+00:00     140  0.93017  0.93028  0.93008  0.93010  0.93009  0.93022  0.93002  0.93003  0.93025  0.93035  0.93015  0.93018
-28 2024-11-22 15:47:00+00:00     181  0.93010  0.93038  0.93010  0.93030  0.93004  0.93031  0.93003  0.93022  0.93017  0.93046  0.93016  0.93039
+2024-11-22 10:58:58 LogWrapper init() ./logs/EUR_CHF.log
+2024-11-22 10:58:58 {'n_ma': 10, 'n_std': 1.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.3}
+2024-11-22 10:58:58 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 10:59:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 10:59:08 tech_manager: max_rows:30 candle_time:2024-11-22 15:58:00+00:00 granularity:M1
+2024-11-22 10:59:08 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 15:54:00+00:00  0.92986  0.93018  0.00021
+25  EUR_CHF 2024-11-22 15:55:00+00:00  0.92995  0.92988  0.00016
+26  EUR_CHF 2024-11-22 15:56:00+00:00  0.93028  0.92993  0.00017
+27  EUR_CHF 2024-11-22 15:57:00+00:00  0.93029  0.93025  0.00014
+28  EUR_CHF 2024-11-22 15:58:00+00:00  0.93036  0.93026  0.00013
+2024-11-22 11:00:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:00:09 tech_manager: max_rows:30 candle_time:2024-11-22 15:59:00+00:00 granularity:M1
+2024-11-22 11:00:09 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 15:55:00+00:00  0.92995  0.92988  0.00016
+25  EUR_CHF 2024-11-22 15:56:00+00:00  0.93028  0.92993  0.00017
+26  EUR_CHF 2024-11-22 15:57:00+00:00  0.93029  0.93025  0.00014
+27  EUR_CHF 2024-11-22 15:58:00+00:00  0.93036  0.93026  0.00013
+28  EUR_CHF 2024-11-22 15:59:00+00:00  0.93036  0.93037  0.00014
+2024-11-22 11:01:00 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:01:00 tech_manager: max_rows:30 candle_time:2024-11-22 16:00:00+00:00 granularity:M1
+2024-11-22 11:01:00 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+25  EUR_CHF 2024-11-22 15:56:00+00:00  0.93028  0.92993  0.00017
+26  EUR_CHF 2024-11-22 15:57:00+00:00  0.93029  0.93025  0.00014
+27  EUR_CHF 2024-11-22 15:58:00+00:00  0.93036  0.93026  0.00013
+28  EUR_CHF 2024-11-22 15:59:00+00:00  0.93036  0.93037  0.00014
+29  EUR_CHF 2024-11-22 16:00:00+00:00  0.93042  0.93036  0.00015
+2024-11-22 11:02:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:02:01 tech_manager: max_rows:30 candle_time:2024-11-22 16:01:00+00:00 granularity:M1
+2024-11-22 11:02:01 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 15:57:00+00:00  0.93029  0.93025  0.00014
+25  EUR_CHF 2024-11-22 15:58:00+00:00  0.93036  0.93026  0.00013
+26  EUR_CHF 2024-11-22 15:59:00+00:00  0.93036  0.93037  0.00014
+27  EUR_CHF 2024-11-22 16:00:00+00:00  0.93042  0.93036  0.00015
+28  EUR_CHF 2024-11-22 16:01:00+00:00  0.93016  0.93042  0.00017
+2024-11-22 11:03:02 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:03:02 tech_manager: max_rows:30 candle_time:2024-11-22 16:02:00+00:00 granularity:M1
+2024-11-22 11:03:02 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 15:58:00+00:00  0.93036  0.93026  0.00013
+25  EUR_CHF 2024-11-22 15:59:00+00:00  0.93036  0.93037  0.00014
+26  EUR_CHF 2024-11-22 16:00:00+00:00  0.93042  0.93036  0.00015
+27  EUR_CHF 2024-11-22 16:01:00+00:00  0.93016  0.93042  0.00017
+28  EUR_CHF 2024-11-22 16:02:00+00:00  0.93026  0.93018  0.00015
+2024-11-22 11:04:03 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:04:03 tech_manager: max_rows:30 candle_time:2024-11-22 16:03:00+00:00 granularity:M1
+2024-11-22 11:04:03 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 15:59:00+00:00  0.93036  0.93037  0.00014
+25  EUR_CHF 2024-11-22 16:00:00+00:00  0.93042  0.93036  0.00015
+26  EUR_CHF 2024-11-22 16:01:00+00:00  0.93016  0.93042  0.00017
+27  EUR_CHF 2024-11-22 16:02:00+00:00  0.93026  0.93018  0.00015
+28  EUR_CHF 2024-11-22 16:03:00+00:00  0.93034  0.93026  0.00015
+2024-11-22 11:05:03 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:05:03 tech_manager: max_rows:30 candle_time:2024-11-22 16:04:00+00:00 granularity:M1
+2024-11-22 11:05:03 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:00:00+00:00  0.93042  0.93036  0.00015
+25  EUR_CHF 2024-11-22 16:01:00+00:00  0.93016  0.93042  0.00017
+26  EUR_CHF 2024-11-22 16:02:00+00:00  0.93026  0.93018  0.00015
+27  EUR_CHF 2024-11-22 16:03:00+00:00  0.93034  0.93026  0.00015
+28  EUR_CHF 2024-11-22 16:04:00+00:00  0.93033  0.93036  0.00016
+2024-11-22 11:06:04 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:06:04 tech_manager: max_rows:30 candle_time:2024-11-22 16:05:00+00:00 granularity:M1
+2024-11-22 11:06:04 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:01:00+00:00  0.93016  0.93042  0.00017
+25  EUR_CHF 2024-11-22 16:02:00+00:00  0.93026  0.93018  0.00015
+26  EUR_CHF 2024-11-22 16:03:00+00:00  0.93034  0.93026  0.00015
+27  EUR_CHF 2024-11-22 16:04:00+00:00  0.93033  0.93036  0.00016
+28  EUR_CHF 2024-11-22 16:05:00+00:00  0.93030  0.93034  0.00017
+2024-11-22 11:07:05 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:07:05 tech_manager: max_rows:30 candle_time:2024-11-22 16:06:00+00:00 granularity:M1
+2024-11-22 11:07:05 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:02:00+00:00  0.93026  0.93018  0.00015
+25  EUR_CHF 2024-11-22 16:03:00+00:00  0.93034  0.93026  0.00015
+26  EUR_CHF 2024-11-22 16:04:00+00:00  0.93033  0.93036  0.00016
+27  EUR_CHF 2024-11-22 16:05:00+00:00  0.93030  0.93034  0.00017
+28  EUR_CHF 2024-11-22 16:06:00+00:00  0.93019  0.93033  0.00018
+2024-11-22 11:08:06 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:08:06 tech_manager: max_rows:30 candle_time:2024-11-22 16:07:00+00:00 granularity:M1
+2024-11-22 11:08:06 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:03:00+00:00  0.93034  0.93026  0.00015
+25  EUR_CHF 2024-11-22 16:04:00+00:00  0.93033  0.93036  0.00016
+26  EUR_CHF 2024-11-22 16:05:00+00:00  0.93030  0.93034  0.00017
+27  EUR_CHF 2024-11-22 16:06:00+00:00  0.93019  0.93033  0.00018
+28  EUR_CHF 2024-11-22 16:07:00+00:00  0.93035  0.93020  0.00018
+2024-11-22 11:09:07 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:09:07 tech_manager: max_rows:30 candle_time:2024-11-22 16:08:00+00:00 granularity:M1
+2024-11-22 11:09:07 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:04:00+00:00  0.93033  0.93036  0.00016
+25  EUR_CHF 2024-11-22 16:05:00+00:00  0.93030  0.93034  0.00017
+26  EUR_CHF 2024-11-22 16:06:00+00:00  0.93019  0.93033  0.00018
+27  EUR_CHF 2024-11-22 16:07:00+00:00  0.93035  0.93020  0.00018
+28  EUR_CHF 2024-11-22 16:08:00+00:00  0.93034  0.93036  0.00017
+2024-11-22 11:10:07 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:10:07 tech_manager: max_rows:30 candle_time:2024-11-22 16:09:00+00:00 granularity:M1
+2024-11-22 11:10:08 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:05:00+00:00  0.93030  0.93034  0.00017
+25  EUR_CHF 2024-11-22 16:06:00+00:00  0.93019  0.93033  0.00018
+26  EUR_CHF 2024-11-22 16:07:00+00:00  0.93035  0.93020  0.00018
+27  EUR_CHF 2024-11-22 16:08:00+00:00  0.93034  0.93036  0.00017
+28  EUR_CHF 2024-11-22 16:09:00+00:00  0.93040  0.93036  0.00017
+2024-11-22 11:11:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:11:08 tech_manager: max_rows:30 candle_time:2024-11-22 16:10:00+00:00 granularity:M1
+2024-11-22 11:11:08 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:06:00+00:00  0.93019  0.93033  0.00018
+25  EUR_CHF 2024-11-22 16:07:00+00:00  0.93035  0.93020  0.00018
+26  EUR_CHF 2024-11-22 16:08:00+00:00  0.93034  0.93036  0.00017
+27  EUR_CHF 2024-11-22 16:09:00+00:00  0.93040  0.93036  0.00017
+28  EUR_CHF 2024-11-22 16:10:00+00:00  0.93031  0.93038  0.00018
+2024-11-22 11:12:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:12:09 tech_manager: max_rows:30 candle_time:2024-11-22 16:11:00+00:00 granularity:M1
+2024-11-22 11:12:09 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:07:00+00:00  0.93035  0.93020  0.00018
+25  EUR_CHF 2024-11-22 16:08:00+00:00  0.93034  0.93036  0.00017
+26  EUR_CHF 2024-11-22 16:09:00+00:00  0.93040  0.93036  0.00017
+27  EUR_CHF 2024-11-22 16:10:00+00:00  0.93031  0.93038  0.00018
+28  EUR_CHF 2024-11-22 16:11:00+00:00  0.93016  0.93034  0.00017
+2024-11-22 11:13:10 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:13:10 tech_manager: max_rows:30 candle_time:2024-11-22 16:12:00+00:00 granularity:M1
+2024-11-22 11:13:10 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:08:00+00:00  0.93034  0.93036  0.00017
+25  EUR_CHF 2024-11-22 16:09:00+00:00  0.93040  0.93036  0.00017
+26  EUR_CHF 2024-11-22 16:10:00+00:00  0.93031  0.93038  0.00018
+27  EUR_CHF 2024-11-22 16:11:00+00:00  0.93016  0.93034  0.00017
+28  EUR_CHF 2024-11-22 16:12:00+00:00  0.93026  0.93018  0.00015
+2024-11-22 11:14:00 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:14:00 tech_manager: max_rows:30 candle_time:2024-11-22 16:13:00+00:00 granularity:M1
+2024-11-22 11:14:01 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:09:00+00:00  0.93040  0.93036  0.00017
+25  EUR_CHF 2024-11-22 16:10:00+00:00  0.93031  0.93038  0.00018
+26  EUR_CHF 2024-11-22 16:11:00+00:00  0.93016  0.93034  0.00017
+27  EUR_CHF 2024-11-22 16:12:00+00:00  0.93026  0.93018  0.00015
+28  EUR_CHF 2024-11-22 16:13:00+00:00  0.93008  0.93027  0.00016
+2024-11-22 11:15:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:15:01 tech_manager: max_rows:30 candle_time:2024-11-22 16:14:00+00:00 granularity:M1
+2024-11-22 11:15:01 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:10:00+00:00  0.93031  0.93038  0.00018
+25  EUR_CHF 2024-11-22 16:11:00+00:00  0.93016  0.93034  0.00017
+26  EUR_CHF 2024-11-22 16:12:00+00:00  0.93026  0.93018  0.00015
+27  EUR_CHF 2024-11-22 16:13:00+00:00  0.93008  0.93027  0.00016
+28  EUR_CHF 2024-11-22 16:14:00+00:00  0.93010  0.93009  0.00017
+2024-11-22 11:16:02 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:16:02 tech_manager: max_rows:30 candle_time:2024-11-22 16:15:00+00:00 granularity:M1
+2024-11-22 11:16:02 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:11:00+00:00  0.93016  0.93034  0.00017
+25  EUR_CHF 2024-11-22 16:12:00+00:00  0.93026  0.93018  0.00015
+26  EUR_CHF 2024-11-22 16:13:00+00:00  0.93008  0.93027  0.00016
+27  EUR_CHF 2024-11-22 16:14:00+00:00  0.93010  0.93009  0.00017
+28  EUR_CHF 2024-11-22 16:15:00+00:00  0.93010  0.93012  0.00017
+2024-11-22 11:17:03 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:17:03 tech_manager: max_rows:30 candle_time:2024-11-22 16:16:00+00:00 granularity:M1
+2024-11-22 11:17:03 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:12:00+00:00  0.93026  0.93018  0.00015
+25  EUR_CHF 2024-11-22 16:13:00+00:00  0.93008  0.93027  0.00016
+26  EUR_CHF 2024-11-22 16:14:00+00:00  0.93010  0.93009  0.00017
+27  EUR_CHF 2024-11-22 16:15:00+00:00  0.93010  0.93012  0.00017
+28  EUR_CHF 2024-11-22 16:16:00+00:00  0.93018  0.93008  0.00018
+2024-11-22 11:18:04 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10ced00d0>
+2024-11-22 11:18:04 tech_manager: max_rows:30 candle_time:2024-11-22 16:17:00+00:00 granularity:M1
+2024-11-22 11:18:04 process_candles:
+       PAIR                      time    mid_c    mid_o   SPREAD
+24  EUR_CHF 2024-11-22 16:13:00+00:00  0.93008  0.93027  0.00016
+25  EUR_CHF 2024-11-22 16:14:00+00:00  0.93010  0.93009  0.00017
+26  EUR_CHF 2024-11-22 16:15:00+00:00  0.93010  0.93012  0.00017
+27  EUR_CHF 2024-11-22 16:16:00+00:00  0.93018  0.93008  0.00018
+28  EUR_CHF 2024-11-22 16:17:00+00:00  0.93022  0.93018  0.00017

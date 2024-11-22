@@ -1,21 +1,102 @@
-2024-11-22 12:10:43 LogWrapper init() ./logs/GBP_JPY.log
-2024-11-22 12:10:43 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
-2024-11-22 12:10:44 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x11192f410>
-2024-11-22 12:11:04 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x11192f410>
-2024-11-22 12:11:04 tech_manager: max_rows:32 candle_time:2024-11-22 17:10:00+00:00 granularity:M1
-2024-11-22 12:11:04 process_candles:
-       PAIR                      time    mid_c    mid_o  SPREAD      GAIN  SIGNAL
-26  GBP_JPY 2024-11-22 17:06:00+00:00  193.790  193.784   0.029  0.092667       0
-27  GBP_JPY 2024-11-22 17:07:00+00:00  193.761  193.790   0.036  0.057278       0
-28  GBP_JPY 2024-11-22 17:08:00+00:00  193.786  193.762   0.027  0.074306       0
-29  GBP_JPY 2024-11-22 17:09:00+00:00  193.769  193.786   0.034  0.049250       0
-30  GBP_JPY 2024-11-22 17:10:00+00:00  193.815  193.775   0.028  0.082333       0
-2024-11-22 12:12:05 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x11192f410>
-2024-11-22 12:12:06 tech_manager: max_rows:32 candle_time:2024-11-22 17:11:00+00:00 granularity:M1
-2024-11-22 12:12:06 process_candles:
-       PAIR                      time    mid_c    mid_o  SPREAD      GAIN  SIGNAL
-26  GBP_JPY 2024-11-22 17:07:00+00:00  193.761  193.790   0.036  0.057278       0
-27  GBP_JPY 2024-11-22 17:08:00+00:00  193.786  193.762   0.027  0.074306       0
-28  GBP_JPY 2024-11-22 17:09:00+00:00  193.769  193.786   0.034  0.049250       0
-29  GBP_JPY 2024-11-22 17:10:00+00:00  193.815  193.775   0.028  0.082333       0
-30  GBP_JPY 2024-11-22 17:11:00+00:00  193.774  193.816   0.033  0.030000       0
+2024-11-22 13:30:25 LogWrapper init() ./logs/GBP_JPY.log
+2024-11-22 13:30:25 {'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
+2024-11-22 13:30:25 CandleManager() init last_candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:31:06 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:31:06 tech_manager: max_rows:32 candle_time:2024-11-22 18:30:00+00:00 granularity:M1
+2024-11-22 13:31:06 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:26:00+00:00  193.892  193.888  0.0  0.0   0.030  0.011222       0
+27  GBP_JPY 2024-11-22 18:27:00+00:00  193.896  193.894  0.0  0.0   0.032  0.003500       0
+28  GBP_JPY 2024-11-22 18:28:00+00:00  193.921  193.896  0.0  0.0   0.030  0.022611       0
+29  GBP_JPY 2024-11-22 18:29:00+00:00  193.930  193.920  0.0  0.0   0.032  0.032861       0
+30  GBP_JPY 2024-11-22 18:30:00+00:00  193.950  193.930  0.0  0.0   0.029  0.052889       0
+2024-11-22 13:32:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:32:08 tech_manager: max_rows:32 candle_time:2024-11-22 18:31:00+00:00 granularity:M1
+2024-11-22 13:32:08 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:27:00+00:00  193.896  193.894  0.0  0.0   0.032  0.003500       0
+27  GBP_JPY 2024-11-22 18:28:00+00:00  193.921  193.896  0.0  0.0   0.030  0.022611       0
+28  GBP_JPY 2024-11-22 18:29:00+00:00  193.930  193.920  0.0  0.0   0.032  0.032861       0
+29  GBP_JPY 2024-11-22 18:30:00+00:00  193.950  193.930  0.0  0.0   0.029  0.052889       0
+30  GBP_JPY 2024-11-22 18:31:00+00:00  193.957  193.947  0.0  0.0   0.028  0.057139       0
+2024-11-22 13:33:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:33:10 tech_manager: max_rows:32 candle_time:2024-11-22 18:32:00+00:00 granularity:M1
+2024-11-22 13:33:10 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:28:00+00:00  193.921  193.896  0.0  0.0   0.030  0.022611       0
+27  GBP_JPY 2024-11-22 18:29:00+00:00  193.930  193.920  0.0  0.0   0.032  0.032861       0
+28  GBP_JPY 2024-11-22 18:30:00+00:00  193.950  193.930  0.0  0.0   0.029  0.052889       0
+29  GBP_JPY 2024-11-22 18:31:00+00:00  193.957  193.947  0.0  0.0   0.028  0.057139       0
+30  GBP_JPY 2024-11-22 18:32:00+00:00  193.957  193.957  0.0  0.0   0.032  0.051306       0
+2024-11-22 13:34:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:34:01 tech_manager: max_rows:32 candle_time:2024-11-22 18:33:00+00:00 granularity:M1
+2024-11-22 13:34:01 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:29:00+00:00  193.930  193.920  0.0  0.0   0.032  0.032861       0
+27  GBP_JPY 2024-11-22 18:30:00+00:00  193.950  193.930  0.0  0.0   0.029  0.052889       0
+28  GBP_JPY 2024-11-22 18:31:00+00:00  193.957  193.947  0.0  0.0   0.028  0.057139       0
+29  GBP_JPY 2024-11-22 18:32:00+00:00  193.957  193.957  0.0  0.0   0.032  0.051306       0
+30  GBP_JPY 2024-11-22 18:33:00+00:00  193.952  193.953  0.0  0.0   0.033  0.039417       0
+2024-11-22 13:35:02 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:35:02 tech_manager: max_rows:32 candle_time:2024-11-22 18:34:00+00:00 granularity:M1
+2024-11-22 13:35:02 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:30:00+00:00  193.950  193.930  0.0  0.0   0.029  0.052889       0
+27  GBP_JPY 2024-11-22 18:31:00+00:00  193.957  193.947  0.0  0.0   0.028  0.057139       0
+28  GBP_JPY 2024-11-22 18:32:00+00:00  193.957  193.957  0.0  0.0   0.032  0.051306       0
+29  GBP_JPY 2024-11-22 18:33:00+00:00  193.952  193.953  0.0  0.0   0.033  0.039417       0
+30  GBP_JPY 2024-11-22 18:34:00+00:00  193.938  193.952  0.0  0.0   0.032  0.020028       0
+2024-11-22 13:36:03 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:36:04 tech_manager: max_rows:32 candle_time:2024-11-22 18:35:00+00:00 granularity:M1
+2024-11-22 13:36:04 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:31:00+00:00  193.957  193.947  0.0  0.0   0.028  0.057139       0
+27  GBP_JPY 2024-11-22 18:32:00+00:00  193.957  193.957  0.0  0.0   0.032  0.051306       0
+28  GBP_JPY 2024-11-22 18:33:00+00:00  193.952  193.953  0.0  0.0   0.033  0.039417       0
+29  GBP_JPY 2024-11-22 18:34:00+00:00  193.938  193.952  0.0  0.0   0.032  0.020028       0
+30  GBP_JPY 2024-11-22 18:35:00+00:00  193.952  193.938  0.0  0.0   0.029  0.028306       0
+2024-11-22 13:37:05 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:37:05 tech_manager: max_rows:32 candle_time:2024-11-22 18:36:00+00:00 granularity:M1
+2024-11-22 13:37:05 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:32:00+00:00  193.957  193.957  0.0  0.0   0.032  0.051306       0
+27  GBP_JPY 2024-11-22 18:33:00+00:00  193.952  193.953  0.0  0.0   0.033  0.039417       0
+28  GBP_JPY 2024-11-22 18:34:00+00:00  193.938  193.952  0.0  0.0   0.032  0.020028       0
+29  GBP_JPY 2024-11-22 18:35:00+00:00  193.952  193.938  0.0  0.0   0.029  0.028306       0
+30  GBP_JPY 2024-11-22 18:36:00+00:00  193.930  193.952  0.0  0.0   0.035  0.002444       0
+2024-11-22 13:38:07 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:38:07 tech_manager: max_rows:32 candle_time:2024-11-22 18:37:00+00:00 granularity:M1
+2024-11-22 13:38:07 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:33:00+00:00  193.952  193.953  0.0  0.0   0.033  0.039417       0
+27  GBP_JPY 2024-11-22 18:34:00+00:00  193.938  193.952  0.0  0.0   0.032  0.020028       0
+28  GBP_JPY 2024-11-22 18:35:00+00:00  193.952  193.938  0.0  0.0   0.029  0.028306       0
+29  GBP_JPY 2024-11-22 18:36:00+00:00  193.930  193.952  0.0  0.0   0.035  0.002444       0
+30  GBP_JPY 2024-11-22 18:37:00+00:00  193.911  193.931  0.0  0.0   0.034  0.018889       0
+2024-11-22 13:39:08 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:39:08 tech_manager: max_rows:32 candle_time:2024-11-22 18:38:00+00:00 granularity:M1
+2024-11-22 13:39:08 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:34:00+00:00  193.938  193.952  0.0  0.0   0.032  0.020028       0
+27  GBP_JPY 2024-11-22 18:35:00+00:00  193.952  193.938  0.0  0.0   0.029  0.028306       0
+28  GBP_JPY 2024-11-22 18:36:00+00:00  193.930  193.952  0.0  0.0   0.035  0.002444       0
+29  GBP_JPY 2024-11-22 18:37:00+00:00  193.911  193.931  0.0  0.0   0.034  0.018889       0
+30  GBP_JPY 2024-11-22 18:38:00+00:00  193.905  193.912  0.0  0.0   0.034  0.026278       0
+2024-11-22 13:40:09 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:40:10 tech_manager: max_rows:32 candle_time:2024-11-22 18:39:00+00:00 granularity:M1
+2024-11-22 13:40:10 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:35:00+00:00  193.952  193.938  0.0  0.0   0.029  0.028306       0
+27  GBP_JPY 2024-11-22 18:36:00+00:00  193.930  193.952  0.0  0.0   0.035  0.002444       0
+28  GBP_JPY 2024-11-22 18:37:00+00:00  193.911  193.931  0.0  0.0   0.034  0.018889       0
+29  GBP_JPY 2024-11-22 18:38:00+00:00  193.905  193.912  0.0  0.0   0.034  0.026278       0
+30  GBP_JPY 2024-11-22 18:39:00+00:00  193.892  193.904  0.0  0.0   0.037  0.039528       0
+2024-11-22 13:41:01 CandleManager() new candle:<models.candle_timing.CandleTiming object at 0x10b6cb050>
+2024-11-22 13:41:01 tech_manager: max_rows:32 candle_time:2024-11-22 18:40:00+00:00 granularity:M1
+2024-11-22 13:41:01 process_candles:
+       PAIR                      time    mid_c    mid_o   SL   TP  SPREAD      GAIN  SIGNAL
+26  GBP_JPY 2024-11-22 18:36:00+00:00  193.930  193.952  0.0  0.0   0.035  0.002444       0
+27  GBP_JPY 2024-11-22 18:37:00+00:00  193.911  193.931  0.0  0.0   0.034  0.018889       0
+28  GBP_JPY 2024-11-22 18:38:00+00:00  193.905  193.912  0.0  0.0   0.034  0.026278       0
+29  GBP_JPY 2024-11-22 18:39:00+00:00  193.892  193.904  0.0  0.0   0.037  0.039528       0
+30  GBP_JPY 2024-11-22 18:40:00+00:00  193.876  193.892  0.0  0.0   0.034  0.052889       0

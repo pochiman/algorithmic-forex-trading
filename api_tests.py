@@ -7,5 +7,6 @@ from models.candle_timing import CandleTiming
 if __name__ == '__main__':
     api = OandaApi()
     instrumentCollection.LoadInstruments("./data")
-    dd = api.last_complete_candle("EUR_USD", granularity="M5")
-    print(CandleTiming(dd))
+    # dd = api.last_complete_candle("EUR_USD", granularity="M5")
+    # print(CandleTiming(dd))
+    print(api.get_prices(["GBP_JPY", "AUD_NZD"]))

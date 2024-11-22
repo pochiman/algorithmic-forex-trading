@@ -7,6 +7,7 @@ import constants.defs as defs
 from dateutil import parser
 from datetime import datetime as dt
 from infrastructure.instrument_collection import instrumentCollection as ic
+from models.api_price import ApiPrice
 from models.open_trade import OpenTrade
 
 class OandaApi:
@@ -178,3 +179,17 @@ class OandaApi:
 
         if ok == True and 'trades' in response:
             return [OpenTrade(x) for x in response['trades']]
+
+    def get_prices(self, instruments_list):
+        url = f"accounts/{defs.ACCOUNT_ID}/pricing"
+
+        params = dict(
+            instruments=','.join(instruments_list)
+        )
+
+        ok, response = self.make_request(url, params=params)
+
+        if ok == True and 'prices' in response:
+            return [ApiPrice(x) for x in response['prices']]
+
+        return None

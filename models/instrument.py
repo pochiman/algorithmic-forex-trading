@@ -23,5 +23,5 @@ class Instrument:
             ob['pipLocation'],
             ob['tradeUnitsPrecision'],
             ob['marginRate'],
-            ob['displayPrecision'],
+            ob['displayPrecision']
         )

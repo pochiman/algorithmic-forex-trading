@@ -135,7 +135,7 @@ def analyse_pair(instrument, granularity, ma_long, ma_short, filepath):
                 instrument,
                 granularity
             )
-            print(ma_result)
+            # print(ma_result)
             results_list.append(ma_result)
     process_results(results_list, filepath)
 

@@ -33,7 +33,7 @@ def place_trade(trade_decision: TradeDecision, api: OandaApi, log_message, log_e
         trade_decision.tp
     )
 
-    if trade_id is not None:
+    if trade_id is None:
         log_error(f"ERROR placing {trade_decision}")
         log_message(f"ERROR placing {trade_decision}", trade_decision.pair)
     else:

@@ -34,5 +34,5 @@ class PriceStreamer(threading.Thread):
             if price:
                 decoded_price = json.loads(price.decode('utf-8'))
                 if 'type' in decoded_price and decoded_price['type'] == 'PRICE':
-                    print(LiveApiPrice(decoded_price))
+                    print(LiveApiPrice(decoded_price).get_dict())
                     # processing

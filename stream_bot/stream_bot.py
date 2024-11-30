@@ -18,6 +18,7 @@ def run_bot():
 
 
     candle_queue = Queue()
+    trade_work_queue = Queue()
         
 
     for p in tradeSettingsCollection.pair_list():
@@ -46,6 +47,7 @@ def run_bot():
         candle_t = CandleWorker(
                                     tradeSettingsCollection.get_trade_settings(p),
                                     candle_queue,
+                                    trade_work_queue,
                                     tradeSettingsCollection.granularity)
         candle_t.daemon = True
         threads.append(candle_t)

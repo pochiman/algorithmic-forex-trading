@@ -11,11 +11,13 @@ class CandleWorker(threading.Thread):
 
     def __init__(self, trade_settings: TradeSettings,
                  candle_work: Queue,
+                 trade_work_queue: Queue,
                   granularity: str):
         super().__init__()
         self.trade_settings = trade_settings
         self.candle_work = candle_work
         self.granularity = granularity
+        self.trade_work_queue = trade_work_queue
 
         self.log = LogWrapper(f"CandleWorker_{trade_settings.pair}")
         self.api = OandaApi()

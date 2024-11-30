@@ -12,6 +12,12 @@ def get_date(c):
             return parser.parse(date_text)
     return None   
 
+def get_data_point(key, element):
+    for e in['span', 'a']:
+        d = element.select_one(f"{e}#{key}")
+        if d is not None:
+            return d.get_text()
+    return ''    
 
 def get_data_dict(item_date, table_rows):
 
@@ -24,6 +30,9 @@ def get_data_dict(item_date, table_rows):
             category=tr.attrs['data-category'],
             event=tr.attrs['data-event'],
             symbol=tr.attrs['data-symbol'],
+            actual=get_data_point('actual', tr),
+            previous=get_data_point('previous', tr),
+            forecast=get_data_point('forecast', tr)
         ))
 
     return data

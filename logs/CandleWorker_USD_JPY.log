@@ -1,2 +1,2 @@
-2024-11-29 21:24:11 LogWrapper init() ./logs/CandleWorker_USD_JPY.log
-2024-11-29 21:24:11 Created CandleWorker for USD_JPY {'n_ma': 12, 'n_std': 2.0, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5, 'pair': 'USD_JPY'}
+2024-11-29 22:07:14 LogWrapper init() ./logs/CandleWorker_USD_JPY.log
+2024-11-29 22:07:14 Created CandleWorker for USD_JPY {'n_ma': 12, 'n_std': 2.0, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5, 'pair': 'USD_JPY'}

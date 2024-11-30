@@ -57,7 +57,8 @@ class PriceStreamer(StreamBase):
                 decoded_price = json.loads(price.decode('utf-8'))
                 if 'type' in decoded_price and decoded_price['type'] == 'PRICE':
                     self.update_live_price(LiveApiPrice(decoded_price))
-                    print(LiveApiPrice(decoded_price).get_dict())
+                    # print(LiveApiPrice(decoded_price).get_dict())
                     if timer() - start > PriceStreamer.LOG_FREQ:
+                        print(LiveApiPrice(decoded_price).get_dict())
                         self.log_data()
                         start = timer()

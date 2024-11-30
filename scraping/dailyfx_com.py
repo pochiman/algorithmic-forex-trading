@@ -4,10 +4,17 @@ import requests
 
 def dailyfx_com():
 
-    resp = requests.get("https://www.dailyfx.com/sentiment")
+    # -- try this -- #
+    #resp = requests.get("https://www.dailyfx.com/sentiment")
+    #soup = BeautifulSoup(resp.content, 'html.parser')
+    # ---
     
-    soup = BeautifulSoup(resp.content, 'html.parser')
-    
+    # -- when it doesn't work, use the mockup -- #
+    with open("./scraping/mock_files/daily-fx.html", "r", encoding="utf-8") as f:
+        resp = f.read()
+        soup = BeautifulSoup(resp, 'html.parser')
+    # ---
+
     rows = soup.select(".dfx-technicalSentimentCard")
 
     pair_data = []
@@ -16,8 +23,8 @@ def dailyfx_com():
         card = r.select_one(".dfx-technicalSentimentCard__pairAndSignal")
         change_values = r.select(".dfx-technicalSentimentCard__changeValue")
         pair_data.append(dict(
-            pair=card.select_one('a').get_text().replace("/", "_"),
-            sentiment=card.select_one('span').get_text(),
+            pair=card.select_one("a").get_text().replace("/", "_").strip("\n"),
+            sentiment=card.select_one("span").get_text().strip("\n"),
             longs_d=change_values[0].get_text(),
             shorts_d=change_values[1].get_text(),
             longs_w=change_values[3].get_text(),

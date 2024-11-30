@@ -12,6 +12,23 @@ def get_date(c):
             return parser.parse(date_text)
     return None   
 
+
+def get_data_dict(item_date, table_rows):
+
+    data = []
+
+    for tr in table_rows:
+        data.append(dict(
+            date=item_date,
+            country=tr.attrs['data-country'],
+            category=tr.attrs['data-category'],
+            event=tr.attrs['data-event'],
+            symbol=tr.attrs['data-symbol'],
+        ))
+
+    return data
+
+
 def fx_calendar():
 
     session = requests.Session()
@@ -28,10 +45,19 @@ def fx_calendar():
     table = soup.select_one("table#calendar")
 
     last_header_date = None
+    trs = {}
+    final_data = []
 
     for c in table.children:
         if c.name == 'thead':
             if 'class' in c.attrs and 'hidden-head' in c.attrs['class']:
                 continue
             last_header_date = get_date(c)
-            print(last_header_date)
+            trs[last_header_date] = []
+        elif c.name == "tr":
+            trs[last_header_date].append(c)
+
+    for item_date, table_rows in trs.items():
+        final_data += get_data_dict(item_date, table_rows)    
+
+    [print(x) for x in final_data]

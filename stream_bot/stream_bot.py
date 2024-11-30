@@ -1,5 +1,7 @@
+from queue import Queue
 import threading
 import time
+from stream_bot.candle_worker import CandleWorker
 from stream_bot.price_processor import PriceProcessor
 from stream_bot.trade_settings_collection import tradeSettingsCollection
 from stream_example.stream_prices import PriceStreamer
@@ -13,6 +15,10 @@ def run_bot():
     shared_prices = {}
     shared_prices_events = {}
     shared_prices_lock = threading.Lock()
+
+
+    candle_queue = Queue()
+        
 
     for p in tradeSettingsCollection.pair_list():
         shared_prices_events[p] = threading.Event()
@@ -28,11 +34,22 @@ def run_bot():
 
     for p in tradeSettingsCollection.pair_list():
         processing_t = PriceProcessor(shared_prices, shared_prices_lock, shared_prices_events,
+                                      candle_queue,
                                       f"PriceProcessor_{p}", p,
                                       tradeSettingsCollection.granularity)
         processing_t.daemon = True
         threads.append(processing_t)
         processing_t.start()
+
+
+    for p in tradeSettingsCollection.pair_list():
+        candle_t = CandleWorker(
+                                    tradeSettingsCollection.get_trade_settings(p),
+                                    candle_queue,
+                                    tradeSettingsCollection.granularity)
+        candle_t.daemon = True
+        threads.append(candle_t)
+        candle_t.start()
 
     
     try:

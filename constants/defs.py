@@ -12,3 +12,5 @@ SECURE_HEADER = {
 SELL = -1
 BUY = 1
 NONE = 0
+
+MONGO_CONN_STR = os.environ.get("MONGO_CONN_STR")

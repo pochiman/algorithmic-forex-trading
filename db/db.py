@@ -5,6 +5,7 @@ from constants.defs import MONGO_CONN_STR
 class DataDB:
 
     SAMPLE_COLL = "forex_sample"
+    CALENDAR_COLL = "forex_calendar"
 
     def __init__(self):
         self.client = MongoClient(MONGO_CONN_STR)

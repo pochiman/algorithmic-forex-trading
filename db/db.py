@@ -6,6 +6,7 @@ class DataDB:
 
     SAMPLE_COLL = "forex_sample"
     CALENDAR_COLL = "forex_calendar"
+    INSTRUMENTS_COLL = "forex_instruments"
 
     def __init__(self):
         self.client = MongoClient(MONGO_CONN_STR)
@@ -14,6 +15,13 @@ class DataDB:
 
     def test_connection(self):
         print(self.db.list_collection_names())
+
+
+    def delete_many(self, collection, **kwargs):
+        try:
+            _ = self.db[collection].delete_many(kwargs)
+        except errors.InvalidOperation as error:
+            print("delete_many error:", error)        
 
 
     def add_one(self, collection, ob):

@@ -1,4 +1,5 @@
 import json
+from db.db import DataDB
 from models.instrument import Instrument
 
 class InstrumentCollection:
@@ -31,6 +32,20 @@ class InstrumentCollection:
         with open(fileName, "w") as f:
             f.write(json.dumps(instruments_dict, indent=2))
             
+    def CreateDB(self, data):
+        if data is None:
+            print("Instrument file creation failed")
+            return
+        
+        instruments_dict = {}
+        for i in data:
+            key = i['name']
+            instruments_dict[key] = { k: i[k] for k in self.API_KEYS }
+
+        database = DataDB()
+        database.delete_many(DataDB.INSTRUMENTS_COLL)
+        database.add_one(DataDB.INSTRUMENTS_COLL, instruments_dict)
+
 
     def PrintInstruments(self):
         [print(k,v) for k,v in self.instruments_dict.items()]

@@ -10,6 +10,7 @@ class InstrumentCollection:
     def __init__(self):
         self.instruments_dict = {}
 
+
     def LoadInstruments(self, path):
         self.instruments_dict = {}
         fileName = f"{path}/{self.FILENAME}"
@@ -17,6 +18,14 @@ class InstrumentCollection:
             data = json.loads(f.read())
             for k, v in data.items():
                 self.instruments_dict[k] = Instrument.FromApiObject(v)
+
+
+    def LoadInstrumentsDB(self):
+        self.instruments_dict = {}
+        data = DataDB().query_single(DataDB.INSTRUMENTS_COLL)
+        for k, v in data.items():
+            self.instruments_dict[k] = Instrument.FromApiObject(v)
+
 
     def CreateFile(self, data, path):
         if data is None:

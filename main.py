@@ -14,9 +14,9 @@ def db_tests():
 if __name__ == '__main__':
     api = OandaApi()
     # instrumentCollection.LoadInstruments("./data")
-    
-    instrumentCollection.CreateDB(api.get_account_instruments())
-    
+    # instrumentCollection.CreateDB(api.get_account_instruments())
+    instrumentCollection.LoadInstrumentsDB()
+    print(instrumentCollection.instruments_dict)
     # run_streamer()
     # d = DataDB()
     # d.test_connection()

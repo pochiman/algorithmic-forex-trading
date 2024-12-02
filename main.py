@@ -7,7 +7,9 @@ from db.db import DataDB
 def db_tests():
     d = DataDB()
 
-    d.add_one(DataDB.SAMPLE_COLL, dict(age=12, name='paddy', street='elm'))
+    # d.add_one(DataDB.SAMPLE_COLL, dict(age=12, name='paddy', street='elm'))
+    # print(d.query_single(DataDB.SAMPLE_COLL, age=34))
+    print(d.query_distinct(DataDB.SAMPLE_COLL, 'age'))
 
 if __name__ == '__main__':
     # api = OandaApi()

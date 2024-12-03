@@ -1,14 +1,10 @@
-import Test from "./Test";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
-
-    const handleClick = (num) => {
-        alert('handleClick:${num}');
-    }    
+  
     return (
-        <div id="newdiv">
-            Hello
-                <Test surname="Smith" eyes="2" makeClick={handleClick} />
+        <div>
+            <NavigationBar />
         </div>
     );
 }

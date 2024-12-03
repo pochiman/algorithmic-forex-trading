@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 from scraping.bloomberg_com import bloomberg_com
+from scraping.investing_com import get_pair
 
 app = Flask(__name__)
 CORS(app)
@@ -10,10 +11,19 @@ CORS(app)
 def test():
     return jsonify(dict(message='hello'))
 
+
 @app.route("/api/headlines")
 def headlines():
     return jsonify(bloomberg_com())
 
+
+@app.route("/api/technicals/<pair>/<tf>")
+def technicals(pair, tf):
+    data = get_pair(pair, tf)
+    if data is None:
+        return jsonify(dict(message='error getting data'))
+    else:
+        return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)

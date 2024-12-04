@@ -1,13 +1,21 @@
 import React from 'react'
 
-function Select({ options, title, name }) {
+function Select({ options, title, name, defaultValue, onSelected }) {
+
+    const handleChange = (e) => {
+        console.log("e:", e);
+        onSelected(e.target.value);
+    }
+
     return (
         <div>
             <label htmlFor={name}>{title}</label>
             <select
                 className="select"
+                value={defaultValue}
                 name={name}
-                id={name}>
+                id={name}
+                onChange={(e) => handleChange(e)}>
                 {
                     options.map(item => {
                         return <option

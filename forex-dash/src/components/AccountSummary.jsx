@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from 'react'
+import endPoints from '../app/api';
 import TitleHead from './TitleHead'
 
 function AccountSummary() {
 
-    const [count, setCount] = useState(0);
+    const [account, setAccount] = useState(null);
 
     useEffect(() => {
-        console.log("Rendered", count);
+        loadAccount();
     }, [])
 
-    const handleIncr = () => {
-        setCount(count + 1);
+    const loadAccount = async () => {
+        const data = await endPoints.account();
+        setAccount(data);
     }
 
     return (
         <div>
             <TitleHead title="Account Summary" />
-            <button onClick={() => handleIncr()}>Incr</button>
-            <div>{count}</div>
+            {
+                account && <div>
+                    <pre>{JSON.stringify(account, null, 2)}</pre>
+                </div>
+            }
         </div>
     )
 }

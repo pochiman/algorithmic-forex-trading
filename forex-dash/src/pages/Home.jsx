@@ -1,9 +1,14 @@
 import React from 'react'
+import AccountSummary from '../components/AccountSummary'
+import Headlines from '../components/Headlines'
 
 function Home() {
-  return (
-    <div>Home</div>
-  )
+    return (
+        <>
+            <AccountSummary />
+            <Headlines />
+        </>
+    )
 }
 
 export default Home

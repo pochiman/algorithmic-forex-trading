@@ -43,3 +43,7 @@ body {
 .navlink a:hover {
     color: #ddd;
 }
+
+.titleHead {
+    padding-top: 1rem;
+}

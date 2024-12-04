@@ -4,6 +4,26 @@ body {
     font-family: 'Anek Odia', sans-serif;
 }
 
+select {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background-color: rgb(231,231,231);
+    font-size: 0.9rem;
+}
+
+.select {
+    margin-left: 0.7rem;
+}
+
+.options {
+    display: flex;
+}
+
+.options div {
+    margin-left: 1rem;;
+}
+
 #app-holder {
     display: flex;
     flex-direction: column;

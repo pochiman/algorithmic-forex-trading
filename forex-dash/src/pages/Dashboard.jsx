@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { PAIRS } from '../app/data';
+import { GRANULARITIES, PAIRS } from '../app/data';
 import Select from '../components/Select';
 import TitleHead from '../components/TitleHead';
 
 function Dashboard() {
 
     const [ selectedPair, setSelectedPair ] = useState(PAIRS[0].value)
+    const [ selectedGran, setSelectedGran ] = useState(GRANULARITIES[0].value)
 
     return (
         <div>
             <TitleHead title="Options" />
-            {setSelectedPair}
             <div className="segment options">
                 <Select
                     name="Currency"
@@ -18,6 +18,13 @@ function Dashboard() {
                     options={PAIRS}
                     defaultValue={selectedPair}
                     onSelected={setSelectedPair}
+                />
+                <Select
+                    name="Granularity"
+                    title="Select granularity"
+                    options={GRANULARITIES}
+                    defaultValue={selectedGran}
+                    onSelected={setSelectedGran}
                 />    
             </div>    
         </div>

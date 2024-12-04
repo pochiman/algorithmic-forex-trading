@@ -71,3 +71,19 @@ body {
 .account-row .bold {
     font-weight: 700;
 }
+
+.headline {
+    font-weight: 500;
+    padding: 0.8em 0em;
+}
+
+.headline a {
+    text-decoration: none;
+    color: black;
+}
+
+.headline a:hover {
+    font-size: large;
+    font-weight: 700;
+    color: cornflowerblue;
+}

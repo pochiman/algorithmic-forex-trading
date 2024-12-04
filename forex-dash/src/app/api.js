@@ -9,7 +9,8 @@ const requests = {
 }
 
 const endPoints = {
-    account: () => requests.get("/account")
+    account: () => requests.get("/account"),
+    headlines: () => requests.get("/headlines")
 }
 
 export default endPoints;

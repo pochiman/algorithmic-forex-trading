@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GRANULARITIES, PAIRS } from '../app/data';
+import Button from '../components/Button';
 import Select from '../components/Select';
 import TitleHead from '../components/TitleHead';
 
@@ -25,7 +26,8 @@ function Dashboard() {
                     options={GRANULARITIES}
                     defaultValue={selectedGran}
                     onSelected={setSelectedGran}
-                />    
+                />
+                <Button text="Load" handleClick={undefined} />
             </div>    
         </div>
     )

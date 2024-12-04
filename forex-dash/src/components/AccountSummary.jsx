@@ -29,7 +29,7 @@ function AccountSummary() {
         <div>
             <TitleHead title="Account Summary" />
             {
-                account && <div>
+                account && <div className='segment'>
                     {
                         DATA_KEYS.map(item => {
                             return <div key={item.key} className="account-row">

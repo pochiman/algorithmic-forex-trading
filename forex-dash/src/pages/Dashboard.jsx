@@ -9,15 +9,29 @@ import PriceChart from '../components/PriceChart';
 
 function Dashboard() {
 
-    const [ selectedPair, setSelectedPair ] = useState(PAIRS[0].value);
-    const [ selectedGran, setSelectedGran ] = useState(GRANULARITIES[0].value);
+    const [ selectedPair, setSelectedPair ] = useState(null);
+    const [ selectedGran, setSelectedGran ] = useState(null);
     const [ technicalsData, setTechnicalsData ] = useState(null);
     const [ priceData, setPriceData ] = useState(null);
     const [ selectedCount, setSelectedCount ] = useState(COUNTS[0].value);
+    const [ options, setOptions ] = useState(null);
+    const [ loading, setLoading ] = useState(true);
+
+    useEffect(() => {
+        loadOptions();
+    }, []);
 
     const handleCountChange = (count) => {
         setSelectedCount(count);
         loadPrices(count);
+    }
+
+    const loadOptions = async () => {
+        const data = await endPoints.options();
+        setOptions(data);
+        setSelectedGran(data.granularities[0].value);
+        setSelectedPair(data.pairs[0].value);
+        setLoading(false);
     }
 
     const loadPrices = async (count) => {
@@ -31,6 +45,8 @@ function Dashboard() {
         loadPrices(selectedCount);
     }
 
+    if(loading == true) return <h1>Loading...</h1>
+
     return (
         <div>
             <TitleHead title="Options" />
@@ -38,14 +54,14 @@ function Dashboard() {
                 <Select
                     name="Currency"
                     title="Select currency"
-                    options={PAIRS}
+                    options={options.pairs}
                     defaultValue={selectedPair}
                     onSelected={setSelectedPair}
                 />
                 <Select
                     name="Granularity"
                     title="Select granularity"
-                    options={GRANULARITIES}
+                    options={options.granularities}
                     defaultValue={selectedGran}
                     onSelected={setSelectedGran}
                 />

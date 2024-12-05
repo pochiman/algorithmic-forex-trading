@@ -4,6 +4,7 @@ import { GRANULARITIES, PAIRS } from '../app/data';
 import Button from '../components/Button';
 import Select from '../components/Select';
 import TitleHead from '../components/TitleHead';
+import Technicals from '../components/Technicals';
 
 function Dashboard() {
 
@@ -13,7 +14,6 @@ function Dashboard() {
 
     const loadTechnicals = async () => {
         const data = await endPoints.technicals(selectedPair, selectedGran);
-        console.log({...data});
         setTechnicalsData(data);
     }
 
@@ -36,7 +36,9 @@ function Dashboard() {
                     onSelected={setSelectedGran}
                 />
                 <Button text="Load" handleClick={() => loadTechnicals()} />
-            </div>    
+            </div>
+            <TitleHead title="Technicals" />
+            { technicalsData && <Technicals data={technicalsData} /> }
         </div>
     )
 }

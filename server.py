@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from api.oanda_api import OandaApi
+from api.web_options import get_options
 import http
 
 from scraping.bloomberg_com import bloomberg_com
@@ -29,6 +30,11 @@ def headlines():
 @app.route("/api/account")
 def account():
     return get_response(OandaApi().get_account_summary())
+
+
+@app.route("/api/options")
+def options():
+    return get_response(get_options())
 
 
 @app.route("/api/technicals/<pair>/<tf>")

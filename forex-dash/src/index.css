@@ -156,3 +156,12 @@ select {
 .progress-wrap {
     margin: 1.0rem 0rem;
 }
+
+#price-chart-holder {
+    min-height: 600px;
+    height: calc(100vh - 400px);
+}
+
+#chartDiv {
+    height: calc(100% - 50px);
+}

@@ -138,3 +138,21 @@ select {
     font-weight: 700;
     color: cornflowerblue;
 }
+
+.progress {
+    height: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.progress-holder {
+    background-color: rgb(222,222,222);
+}
+
+.progress-text {
+    text-align: center;
+    font-weight: 700;
+}
+
+.progress-wrap {
+    margin: 1.0rem 0rem;
+}

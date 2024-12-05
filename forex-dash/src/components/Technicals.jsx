@@ -9,6 +9,14 @@ const HEADERS = [
 function Technicals({ data }) {
     return (
         <div className='segment'>
+            <Progress
+                title="Bullish"
+                color="#21ba45"
+                percentage={data.percent_bullish} />
+            <Progress
+                title="Bearish"
+                color="#db2828"
+                percentage={data.percent_bearish} />
             <table>
                 <thead>
                     <tr>{

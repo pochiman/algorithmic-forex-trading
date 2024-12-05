@@ -3,7 +3,6 @@ import React from 'react'
 function Select({ options, title, name, defaultValue, onSelected }) {
 
     const handleChange = (e) => {
-        console.log("e:", e);
         onSelected(e.target.value);
     }
 

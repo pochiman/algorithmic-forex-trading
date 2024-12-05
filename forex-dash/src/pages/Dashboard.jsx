@@ -21,7 +21,7 @@ function Dashboard() {
     }
 
     const loadPrices = async (count) => {
-        const data = await endPoints.prices(selectedPair, selectedGran, selectedCount);
+        const data = await endPoints.prices(selectedPair, selectedGran, count);
         setPriceData(data);
     }
 

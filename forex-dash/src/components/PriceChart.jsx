@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Select from './Select';
 import { COUNTS } from '../app/data';
+import { drawChart } from '../app/chart';
 
 function PriceChart({ priceData, selectedPair, selectedGranularity, 
                       selectedCount, handleCountChange}) {
@@ -8,8 +9,9 @@ function PriceChart({ priceData, selectedPair, selectedGranularity,
 
     useEffect(() => {
         if(priceData) {
-            console.log("Draw Chart ", selectedPair, selectedGranularity);
-            console.log("Draw Chart ", selectedCount);
+            // console.log("Draw Chart ", selectedPair, selectedGranularity);
+            // console.log("Draw Chart ", selectedCount);
+            drawChart(priceData, selectedPair, selectedGranularity, 'chartDiv');
         }
     }, [priceData]);
 

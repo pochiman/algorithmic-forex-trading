@@ -1,20 +1,34 @@
 import React, { useState } from 'react';
 import endPoints from '../app/api';
-import { GRANULARITIES, PAIRS } from '../app/data';
+import { COUNTS, GRANULARITIES, PAIRS } from '../app/data';
 import Button from '../components/Button';
 import Select from '../components/Select';
 import TitleHead from '../components/TitleHead';
 import Technicals from '../components/Technicals';
+import PriceChart from '../components/PriceChart';
 
 function Dashboard() {
 
     const [ selectedPair, setSelectedPair ] = useState(PAIRS[0].value);
     const [ selectedGran, setSelectedGran ] = useState(GRANULARITIES[0].value);
     const [ technicalsData, setTechnicalsData ] = useState(null);
+    const [ priceData, setPriceData ] = useState(null);
+    const [ selectedCount, setSelectedCount ] = useState(COUNTS[0].value);
+
+    const handleCountChange = (count) => {
+        setSelectedCount(count);
+        loadPrices(count);
+    }
+
+    const loadPrices = async (count) => {
+        const data = await endPoints.prices(selectedPair, selectedGran, selectedCount);
+        setPriceData(data);
+    }
 
     const loadTechnicals = async () => {
         const data = await endPoints.technicals(selectedPair, selectedGran);
         setTechnicalsData(data);
+        loadPrices(selectedCount);
     }
 
     return (
@@ -39,6 +53,14 @@ function Dashboard() {
             </div>
             <TitleHead title="Technicals" />
             { technicalsData && <Technicals data={technicalsData} /> }
+            <TitleHead title="Price Chart" />
+            { priceData && <PriceChart
+              selectedCount={selectedCount}
+              selectedPair={selectedPair}
+              selectedGranularity={selectedGran}
+              handleCountChange={handleCountChange}
+              priceData={priceData}    
+            />}
         </div>
     )
 }

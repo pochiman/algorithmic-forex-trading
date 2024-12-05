@@ -11,7 +11,8 @@ const requests = {
 const endPoints = {
     account: () => requests.get("/account"),
     headlines: () => requests.get("/headlines"),
-    technicals: (p,g) => requests.get('/technicals/${p}/${g}')
+    technicals: (p,g) => requests.get(`/technicals/${p}/${g}`),
+    prices: (p,g,c) => requests.get(`/prices/${p}/${g}/${c}`)
 }
 
 export default endPoints;

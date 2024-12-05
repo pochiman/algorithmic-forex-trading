@@ -20,7 +20,7 @@ function Headlines() {
             <div className="segment">
                 {
                     headlines && headlines.map((item, index) => {
-                        return <Headline data={item} />
+                        return <Headline data={item} key={index} />
                     })
                 }
             </div>

@@ -16,7 +16,7 @@ function PriceChart({ priceData, selectedPair, selectedGranularity,
     }, [priceData]);
 
     return (
-        <div className ='segment' id='price-chart-holder'>
+        <div className='segment' id='price-chart-holder'>
             <Select
                 name="numrows"
                 title="Num. Rows."
@@ -25,7 +25,7 @@ function PriceChart({ priceData, selectedPair, selectedGranularity,
                 onSelected={handleCountChange}
             />
             <div id="chartDiv"></div>
-        </div>    
+        </div>
     )
 }
 

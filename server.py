@@ -40,7 +40,7 @@ def options():
 @app.route("/api/technicals/<pair>/<tf>")
 def technicals(pair, tf):
     return get_response(get_pair(pair, tf))
-    
+
 
 @app.route("/api/prices/<pair>/<granularity>/<count>")
 def prices(pair, granularity, count):

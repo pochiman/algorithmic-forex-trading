@@ -108,7 +108,7 @@ def apply_candle_props(df: pd.DataFrame):
     df_an['direction_prev_2'] = df_an.direction.shift(2)
     df_an['body_perc_prev'] = df_an.body_perc.shift(1)
     df_an['body_perc_prev_2'] = df_an.body_perc.shift(2)
-    
+
     return df_an
 
 def set_candle_patterns(df_an: pd.DataFrame):

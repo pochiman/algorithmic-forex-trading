@@ -20,7 +20,7 @@ def run_bot():
 
     candle_queue = Queue()
     trade_work_queue = Queue()
-        
+
 
     for p in tradeSettingsCollection.pair_list():
         shared_prices_events[p] = threading.Event()
@@ -69,4 +69,3 @@ def run_bot():
         print("KeyboardInterrupt")
 
     print("ALL DONE")
-    

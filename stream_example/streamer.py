@@ -10,9 +10,9 @@ from stream_example.stream_worker import WorkProcessor
 def load_settings():
     with open("./bot/settings.json", "r") as f:
         return json.loads(f.read())
-    
+
 def run_streamer():
-    
+
     settings = load_settings()
 
     shared_prices = {}

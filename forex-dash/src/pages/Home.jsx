@@ -1,6 +1,6 @@
-import React from 'react'
-import AccountSummary from '../components/AccountSummary'
-import Headlines from '../components/Headlines'
+import React from 'react';
+import AccountSummary from '../components/AccountSummary';
+import Headlines from '../components/Headlines';
 
 function Home() {
     return (

@@ -16,4 +16,3 @@ class StreamBase(threading.Thread):
             self.log.logger.error(msg)
         else:
             self.log.logger.debug(msg)
-            

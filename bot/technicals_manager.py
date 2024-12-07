@@ -1,6 +1,6 @@
 import pandas as pd
-
 from models.trade_decision import TradeDecision
+
 from technicals.indicators import BollingerBands
 
 pd.set_option('display.max_columns', None)

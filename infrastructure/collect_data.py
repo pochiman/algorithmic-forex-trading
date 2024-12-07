@@ -27,7 +27,7 @@ def save_file(final_df: pd.DataFrame, file_prefix, granularity, pair):
 
 
 def fetch_candles(pair, granularity, date_f: dt.datetime,
-                    date_t: dt.datetime, api: OandaApi):
+                  date_t: dt.datetime, api: OandaApi):
     
     attempts = 0
 
@@ -87,7 +87,7 @@ def collect_data(pair, granularity, date_f, date_t, file_prefix, api: OandaApi):
         final_df = pd.concat(candle_dfs)
         save_file(final_df, file_prefix, granularity, pair)
     else:
-        print(f"{pair} {granularity} --> NO DATA SAVED!")        
+        print(f"{pair} {granularity} --> NO DATA SAVED!")
 
 
 

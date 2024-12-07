@@ -28,5 +28,3 @@ class CandleManager:
                 self.log_message(f"CandleManager() new candle:{self.timings[pair]}", pair)
                 triggered.append(pair)
         return triggered
-
-

@@ -3,7 +3,6 @@ import pandas as pd
 import requests
 import datetime as dt
 import time
-
 import constants.defs as defs
 
 data_keys = [
@@ -37,13 +36,13 @@ def get_data_object(text_list, pair_id, time_frame):
     if 'pair_name' in data:
         data['pair_name'] = data['pair_name'].replace("/", "_")
 
-
     return data
+
 
 def investing_com_fetch(pair_id, time_frame):
 
     headers = {
-        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0"
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0) Gecko/20100101 Firefox/98.0"
     }
 
     params = dict(
@@ -52,12 +51,12 @@ def investing_com_fetch(pair_id, time_frame):
         time_frame=time_frame
     )
 
-    resp = requests.get("https://www.investing.com/common/technical_studies/technical_studies_data.php", 
-                        params=params, headers=headers)
-    
-    # print(resp.content)
-    # print(resp.status_code)
-    
+    resp = requests.get("https://www.investing.com/common/technical_studies/technical_studies_data.php",
+                            params=params, headers=headers)
+
+    #print(resp.content)
+    #print(resp.status_code)
+
     text = resp.content.decode("utf-8")
 
     index_start = text.index("pair_name=")
@@ -77,6 +76,7 @@ def investing_com():
             time.sleep(0.5)
 
     return pd.DataFrame.from_dict(data)
+
 
 def get_pair(pair_name, tf):
 

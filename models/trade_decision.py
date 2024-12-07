@@ -10,4 +10,3 @@ class TradeDecision:
 
     def __repr__(self):
         return f"TradeDecision(): {self.pair} dir:{self.signal} gain:{self.gain:.4f} sl:{self.sl:.4f} tp:{self.tp:.4f}"
-    

@@ -13,7 +13,7 @@ STREAM_URL = f"https://stream-fxpractice.oanda.com/v3"
 
 class PriceStreamer(StreamBase):
 
-    LOG_FREQ = 20
+    LOG_FREQ = 60
 
     def __init__(self, shared_prices, price_lock: threading.Lock, price_events):
         super().__init__(shared_prices, price_lock, price_events, "PriceStreamer")
@@ -30,7 +30,7 @@ class PriceStreamer(StreamBase):
             self.shared_prices[live_price.instrument] = live_price
             self.fire_new_price_event(live_price.instrument)
         except Exception as error:
-            self.log_message(f"Exception: {error}", error=True)
+            self.log_message(f"Exception: {error}", error)
         finally:
             self.price_lock.release()
 
@@ -51,13 +51,12 @@ class PriceStreamer(StreamBase):
         url = f"{STREAM_URL}/accounts/{defs.ACCOUNT_ID}/pricing/stream"
 
         resp = requests.get(url, params=params, headers=defs.SECURE_HEADER, stream=True)
-        
+
         for price in resp.iter_lines():
             if price:
                 decoded_price = json.loads(price.decode('utf-8'))
                 if 'type' in decoded_price and decoded_price['type'] == 'PRICE':
                     self.update_live_price(LiveApiPrice(decoded_price))
-                    # print(LiveApiPrice(decoded_price).get_dict())
                     if timer() - start > PriceStreamer.LOG_FREQ:
                         print(LiveApiPrice(decoded_price).get_dict())
                         self.log_data()

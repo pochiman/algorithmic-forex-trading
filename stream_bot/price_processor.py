@@ -46,7 +46,7 @@ class PriceProcessor(StreamBase):
 							  round_me.hour, 
 							  round_me.minute - remainder, 
 							  tzinfo=pytz.timezone("UTC"))
-        return candle_time        
+        return candle_time
 
 
     def detect_new_candle(self, price: LiveApiPrice):
@@ -64,7 +64,7 @@ class PriceProcessor(StreamBase):
         try:
             self.price_lock.acquire()
             price: LiveApiPrice = copy.deepcopy(self.shared_prices[self.pair])
-            # print("PriceProcessor: ", price)
+            # print(f"PriceProcessor : {price}")
             if price is not None:
                 self.detect_new_candle(price)
         except Exception as error:

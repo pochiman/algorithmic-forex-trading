@@ -8,18 +8,30 @@ NONE = 0
 def apply_take_profit(row, PROFIT_FACTOR):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return (row.ask_c - row.ask_o) * PROFIT_FACTOR + row.ask_c
+            if row.direction == BUY:
+                return (row.ask_c - row.ask_o) * PROFIT_FACTOR + row.ask_c
+            else:
+                return (row.ask_o - row.ask_c) * PROFIT_FACTOR + row.ask_o
         else:
-            return (row.bid_c - row.bid_o) * PROFIT_FACTOR + row.bid_c
+            if row.direction == SELL:
+                return (row.bid_c - row.bid_o) * PROFIT_FACTOR + row.ask_c
+            else:
+                return (row.bid_o - row.bid_c) * PROFIT_FACTOR + row.ask_o
     else:
         return 0.0
 
 def apply_stop_loss(row):
     if row.SIGNAL != NONE:
         if row.SIGNAL == BUY:
-            return row.ask_o
+            if row.direction == BUY:
+                return row.ask_o
+            else:
+                return row.ask_c
         else:
-            return row.bid_o
+            if row.direction == SELL:
+                return row.bid_o
+            else:
+                return row.bid_c
     else:
         return 0.0
 
@@ -108,7 +120,7 @@ class GuruTester:
         
     def prepare_data(self):
         
-        #print("prepare_data...")
+        # print("prepare_data...")
 
         if self.use_spread == False:
             remove_spread( self.df_big)
@@ -128,20 +140,19 @@ class GuruTester:
         self.merged.SIGNAL = self.merged.SIGNAL.astype(int)
 
     def run_test(self):
-        #print("run_test...")
+        # print("run_test...")
         open_trades_m5 = []
         closed_trades_m5 = []
 
         for index, row in self.merged.iterrows():
-            
-            if row.SIGNAL != NONE:
-                open_trades_m5.append(Trade(row, self.PROFIT_FACTOR, self.LOSS_FACTOR))  
-                
             for ot in open_trades_m5:
                 ot.update(row)
                 if ot.running == False:
                     closed_trades_m5.append(ot)
             open_trades_m5 = [x for x in open_trades_m5 if x.running == True]
 
+            if row.SIGNAL != NONE:
+                open_trades_m5.append(Trade(row, self.PROFIT_FACTOR, self.LOSS_FACTOR))  
+                
         self.df_results = pd.DataFrame.from_dict([vars(x) for x in closed_trades_m5]) 
-        #print("Result:", self.df_results.result.sum())
+        # print("Result:", self.df_results.result.sum())

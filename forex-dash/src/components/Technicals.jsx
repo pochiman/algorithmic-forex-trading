@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Progress from './Progress';
 
 const HEADERS = [
     "R1", "R2", "R3",
@@ -31,8 +32,8 @@ function Technicals({ data }) {
                         })
                     }
                     </tr>
-                </thead>    
-            </table>    
+                </thead>
+            </table>
         </div>
     )
 }

@@ -24,7 +24,7 @@ function Select({ options, title, name, defaultValue, onSelected }) {
                             {item.text}
                         </option>
                     })
-                }    
+                }
             </select>
         </div>
     )

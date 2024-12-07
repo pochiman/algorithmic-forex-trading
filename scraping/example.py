@@ -37,5 +37,3 @@ ourp = dailies[1]
 print(ourp)
 print(ourp.get_text())
 print(ourp.attrs['data-value'])
-
-

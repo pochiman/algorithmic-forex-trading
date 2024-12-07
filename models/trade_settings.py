@@ -6,11 +6,10 @@ class TradeSettings:
         self.maxspread = ob['maxspread']
         self.mingain = ob['mingain']
         self.riskreward = ob['riskreward']
-        self.pair = pair
 
     def __repr__(self):
         return str(vars(self))
-    
+
     @classmethod
     def settings_to_str(cls, settings):
         ret_str = "Trade Settings:\n"
@@ -18,4 +17,3 @@ class TradeSettings:
             ret_str += f"{v}\n"
 
         return ret_str
-    

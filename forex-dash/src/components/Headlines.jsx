@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import endPoints from '../app/api';
+import Headline from './Headline';
 import TitleHead from './TitleHead'
 
 function Headlines() {

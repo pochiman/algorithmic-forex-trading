@@ -13,7 +13,7 @@ class Instrument:
 
     def __repr__(self):
         return str(vars(self))
-    
+
     @classmethod
     def FromApiObject(cls, ob):
         return Instrument(

@@ -52,7 +52,7 @@ def investing_com_fetch(pair_id, time_frame):
     )
 
     resp = requests.get("https://www.investing.com/common/technical_studies/technical_studies_data.php",
-                            params=params, headers=headers)
+                        params=params, headers=headers)
 
     #print(resp.content)
     #print(resp.status_code)

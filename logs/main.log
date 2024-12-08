@@ -1,40 +1,9 @@
-2024-11-22 14:56:46 LogWrapper init() ./logs/main.log
-2024-11-22 14:56:46 Bot started with Trade Settings:
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.14, 'riskreward': 1.5}
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
-{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0014, 'riskreward': 1.5}
+2024-12-07 20:13:45 LogWrapper init() ./logs/main.log
+2024-12-07 20:13:45 Bot started with Trade Settings:
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0006, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0006, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.04, 'mingain': 0.06, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0006, 'riskreward': 1.5}
+{'n_ma': 12, 'n_std': 2.5, 'maxspread': 0.0004, 'mingain': 0.0006, 'riskreward': 1.5}
 
-2024-11-22 14:56:46 Bot started
-2024-11-22 14:57:06 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 14:57:06 Place Trade: TradeDecision(): GBP_CHF dir:1 gain:0.0002 sl:1.1205 tp:1.1208
-2024-11-22 14:57:07 Place Trade: TradeDecision(): EUR_GBP dir:-1 gain:0.0001 sl:0.8312 tp:0.8310
-2024-11-22 14:58:08 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 14:59:09 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:00:00 process_candles triggered:['GBP_CHF', 'GBP_JPY', 'GBP_USD']
-2024-11-22 15:00:01 Place Trade: TradeDecision(): GBP_CHF dir:1 gain:0.0004 sl:1.1201 tp:1.1208
-2024-11-22 15:00:01 Place Trade: TradeDecision(): GBP_JPY dir:1 gain:0.0311 sl:193.8783 tp:193.9301
-2024-11-22 15:00:01 Place Trade: TradeDecision(): GBP_USD dir:1 gain:0.0002 sl:1.2524 tp:1.2528
-2024-11-22 15:00:11 process_candles triggered:['EUR_CHF', 'EUR_GBP']
-2024-11-22 15:00:11 Place Trade: TradeDecision(): EUR_CHF dir:1 gain:0.0002 sl:0.9311 tp:0.9314
-2024-11-22 15:00:11 Place Trade: TradeDecision(): EUR_GBP dir:-1 gain:0.0001 sl:0.8313 tp:0.8311
-2024-11-22 15:01:02 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD']
-2024-11-22 15:01:02 Place Trade: TradeDecision(): GBP_USD dir:1 gain:0.0003 sl:1.2523 tp:1.2528
-2024-11-22 15:01:12 process_candles triggered:['EUR_GBP']
-2024-11-22 15:02:04 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:03:05 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:04:06 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:05:08 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:06:09 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:07:00 process_candles triggered:['GBP_CHF', 'GBP_JPY', 'GBP_USD']
-2024-11-22 15:07:11 process_candles triggered:['EUR_CHF', 'EUR_GBP']
-2024-11-22 15:08:02 process_candles triggered:['GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:08:12 process_candles triggered:['GBP_CHF', 'EUR_CHF']
-2024-11-22 15:09:03 process_candles triggered:['GBP_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:09:14 process_candles triggered:['EUR_CHF']
-2024-11-22 15:10:05 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:11:06 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:11:06 Place Trade: TradeDecision(): GBP_USD dir:1 gain:0.0002 sl:1.2522 tp:1.2526
-2024-11-22 15:12:08 process_candles triggered:['GBP_CHF', 'EUR_CHF', 'GBP_JPY', 'GBP_USD', 'EUR_GBP']
-2024-11-22 15:12:08 Place Trade: TradeDecision(): GBP_JPY dir:1 gain:0.0339 sl:193.8414 tp:193.8979
+2024-12-07 20:13:45 Bot started
